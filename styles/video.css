@@ -16,7 +16,7 @@
   size: 14px;
   font-weight: 500;
   line-height: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .video-preview{
@@ -32,8 +32,8 @@
 }
 
 .profile-picture{
-  width: 40px;
-  border-radius: 40px;
+  width: 36px;
+  border-radius: 36px;
 }
 
 .div-example{
@@ -47,7 +47,7 @@
 /* } */ 
 
 .thumbnail-row {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   position: relative;
 }
 
@@ -67,15 +67,35 @@
   column-gap: 15px;
   row-gap: 40px;
 }
+/*inheritence only work on the pargraph property. it does not change border padding etc*/
+
+@media (max-width: 750px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 
 .video-time{
-  font-family: Roboto,Arial;
   font-size: 12px;
   font-weight: 500;
-  padding-left: 4px;
+  /* padding-left: 4px;
   padding-right: 4px;
   padding-top: 4px;
-  padding-bottom: 4px;
+  padding-bottom: 4px; */
+  padding: 4px;
   background-color: black;
   border-radius: 2px;;
   color: white;
